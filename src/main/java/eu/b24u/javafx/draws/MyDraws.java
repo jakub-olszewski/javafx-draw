@@ -3,6 +3,7 @@ package eu.b24u.javafx.draws;
 import eu.b24u.javafx.minecraft.engine.Aplikacja;
 import eu.b24u.javafx.minecraft.engine.GameMenuBar;
 import eu.b24u.javafx.minecraft.engine.Plotno;
+import eu.b24u.javafx.minecraft.engine.Program;
 import eu.b24u.javafx.minecraft.engine.Scena;
 
 public class MyDraws extends Aplikacja {
@@ -62,8 +63,7 @@ public class MyDraws extends Aplikacja {
 
 	@Override
 	public void zdarzenieKlikniecaMyszka(double x, double y, Plotno plotno) {
-		// TODO Auto-generated method stub
-
+		Program.wypisz("x=" + x + " y=" + y);
 	}
 
 	@Override
