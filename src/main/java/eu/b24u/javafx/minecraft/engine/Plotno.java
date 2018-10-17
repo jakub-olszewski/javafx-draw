@@ -7,6 +7,12 @@ import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.scene.text.Font;
 
+/**
+ * Klasa opisujaca obszar po którym możemy rysować
+ * 
+ * @author student
+ *
+ */
 public class Plotno extends Canvas {
 
 	private GraphicsContext context;
@@ -31,11 +37,23 @@ public class Plotno extends Canvas {
 		context.fillOval(x, y, promien, promien);
 	}
 
-	public void rysujLinie(double d, double e, double f, double g) {
+	/**
+	 * Metoda rysuje linie
+	 * 
+	 * @param x1
+	 *            punkt początku
+	 * @param y1
+	 *            punkt początku
+	 * @param x2
+	 *            punkt końca
+	 * @param y2
+	 *            punkt końca
+	 */
+	public void rysujLinie(double x1, double y1, double x2, double y2) {
 		context.setFill(Color.BLUE);
 		context.setStroke(Color.BLUE);
 		context.setLineWidth(5);
-		context.strokeLine(d, e, f, g);
+		context.strokeLine(x1, y1, x2, y2);
 
 	}
 

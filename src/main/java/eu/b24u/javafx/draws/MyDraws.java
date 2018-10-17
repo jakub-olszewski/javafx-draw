@@ -53,6 +53,11 @@ public class MyDraws extends Aplikacja {
 		scena.ustawRozmiar(630, 600);
 		scena.zablokujOkno();
 		plotno.ustawRozmiar(630, 600);
+
+		// plotno.rysujOkrag(300, 300, 50, javafx.scene.paint.Color.BLUE);
+		plotno.rysujLinie(275, 325, 275, 430);
+		plotno.rysujOkrag(250, 300, 50, javafx.scene.paint.Color.BLUEVIOLET);
+
 	}
 
 	@Override

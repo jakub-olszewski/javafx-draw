@@ -6,7 +6,6 @@ import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
@@ -21,10 +20,8 @@ public abstract class Aplikacja extends Application {
     public void start(Stage primaryStage) {
 		plotno = new Plotno();
 		Scena scena = new Scena(primaryStage);
-		Image image = new Image(getClass().getResourceAsStream("/icon.png"));
-
-
-		scena.get().getIcons().add(image);
+		// Image image = new Image(getClass().getResourceAsStream("/icon.png"));
+		// scena.get().getIcons().add(image);
 		budujScene(scena, plotno);
         Group root = new Group();
 		plotno.setOnMouseClicked(event -> {

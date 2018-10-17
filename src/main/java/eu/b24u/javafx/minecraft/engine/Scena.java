@@ -14,6 +14,12 @@ public class Scena {
 		stage.setTitle(tytul);
 	}
 
+	/**
+	 * Metoda która ustawia rozmiar okna aplikacji
+	 * 
+	 * @param wysokosc
+	 * @param szerokosc
+	 */
 	public void ustawRozmiar(double wysokosc, double szerokosc) {
 		stage.setHeight(wysokosc);
 		stage.setWidth(szerokosc);
