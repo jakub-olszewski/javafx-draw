@@ -69,6 +69,7 @@ public class MyDraws extends Aplikacja {
 	@Override
 	public void zdarzeniePrzeciagniecieMyszka(double x, double y, Plotno plotno) {
 		// TODO Auto-generated method stub
+		plotno.rysujOkrag(x, y, 5, javafx.scene.paint.Color.BLUEVIOLET);
 
 	}
 
