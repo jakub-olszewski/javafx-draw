@@ -46,7 +46,10 @@ public abstract class Aplikacja extends Application {
 
 		root.getChildren().add(plotno);
 
-		root.getChildren().add(budujMenu());// add menu bar
+		GameMenuBar menu = budujMenu();
+		if (menu != null) {
+			root.getChildren().add(budujMenu());// add menu bar
+		}
 
 		scena.get().setScene(new Scene(root));
 		scena.get().show();

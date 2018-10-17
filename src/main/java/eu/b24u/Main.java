@@ -1,6 +1,6 @@
 package eu.b24u;
 
-import eu.b24u.javafx.minecraft.engine.MinecraftAplikacja;
+import eu.b24u.javafx.draws.MyDraws;
 
 /**
  * 
@@ -10,7 +10,7 @@ import eu.b24u.javafx.minecraft.engine.MinecraftAplikacja;
  * @author Jakub
  *
  */
-public class Main extends MinecraftAplikacja {
+public class Main extends MyDraws {
 
 
 
