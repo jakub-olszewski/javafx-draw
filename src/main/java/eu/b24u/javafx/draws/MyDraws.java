@@ -59,6 +59,7 @@ public class MyDraws extends Aplikacja {
 		plotno.rysujLinie(275, 325, 275, 430);
 		plotno.rysujOkrag(250, 300, 50, javafx.scene.paint.Color.BLUEVIOLET);
 
+
 	}
 
 	@Override
