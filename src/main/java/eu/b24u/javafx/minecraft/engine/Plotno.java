@@ -54,7 +54,21 @@ public class Plotno extends Canvas {
 		context.setStroke(Color.BLUE);
 		context.setLineWidth(5);
 		context.strokeLine(x1, y1, x2, y2);
+	}
 
+	/**
+	 * Rysowanie linii polaczenie punktow
+	 * 
+	 * @param p1
+	 *            punkt poczatek
+	 * @param p2
+	 *            punkt koniec
+	 */
+	public void rysujLinie(Punkt p1, Punkt p2) {
+		context.setFill(Color.BLUE);
+		context.setStroke(Color.BLUE);
+		context.setLineWidth(5);
+		context.strokeLine(p1.x, p1.y, p2.x, p2.y);
 	}
 
 	/**
@@ -137,6 +151,12 @@ public class Plotno extends Canvas {
 	public void rysujPunkt(double x, double y) {
 		context.setFill(Color.BLACK);
 		context.fillRect(x, y, 1, 1);
+	}
+
+	public void rysujPunkt(Punkt punkt) {
+		context.setFill(Color.GREEN);
+		context.fillRect(punkt.x, punkt.y, 10, 10);
+		wypiszTekst(punkt.x - 7, punkt.y - 7, 14, punkt.getNazwa(), Color.GREEN);
 	}
 
 

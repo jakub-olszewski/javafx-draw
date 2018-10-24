@@ -1,5 +1,6 @@
 package eu.b24u.javafx.draws;
 
+import eu.b24u.javafx.draws.element.Trojkat;
 import eu.b24u.javafx.minecraft.engine.Aplikacja;
 import eu.b24u.javafx.minecraft.engine.GameMenuBar;
 import eu.b24u.javafx.minecraft.engine.Plotno;
@@ -59,6 +60,8 @@ public class MyDraws extends Aplikacja {
 		plotno.rysujLinie(275, 325, 275, 430);
 		plotno.rysujOkrag(250, 300, 50, javafx.scene.paint.Color.BLUEVIOLET);
 
+
+		Trojkat figuraTrojkat = new Trojkat(plotno);
 
 	}
 

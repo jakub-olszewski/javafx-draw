@@ -4,8 +4,19 @@ import java.awt.Point;
 
 public class Punkt extends Point {
 
+	String nazwa;
+
+	public String getNazwa() {
+		return nazwa;
+	}
+
 	public Punkt(int x, int y) {
 		super(x, y);
+	}
+
+	public Punkt(int x, int y, String nazwa) {
+		super(x, y);
+		this.nazwa = nazwa;
 	}
 
 	/**
