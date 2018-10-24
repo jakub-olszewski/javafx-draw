@@ -29,7 +29,6 @@ public class Trojkat extends Rysunek {
 		Punkt punkt2 = new Punkt(300, 100, "Punkt 2");
 		Punkt punkt3 = new Punkt(300, 200, "Punkt 3");
 
-
 		plotno.rysujLinie(punkt1, punkt2);
 		plotno.rysujLinie(punkt2, punkt3);
 		plotno.rysujLinie(punkt3, punkt1);

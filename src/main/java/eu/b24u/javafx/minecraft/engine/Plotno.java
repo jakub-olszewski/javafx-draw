@@ -72,6 +72,23 @@ public class Plotno extends Canvas {
 	}
 
 	/**
+	 * Rysowanie linii z kolorem
+	 * 
+	 * @param p1
+	 *            punkt poczatek
+	 * @param p2
+	 *            punkt koniec
+	 * @param kolor
+	 *            linii
+	 */
+	public void rysujLinie(Punkt p1, Punkt p2, Color kolor) {
+		context.setFill(kolor);
+		context.setStroke(kolor);
+		context.setLineWidth(5);
+		context.strokeLine(p1.x, p1.y, p2.x, p2.y);
+	}
+
+	/**
 	 * Metoda służy do rysowania prostokąta pomiędzy 2 punktami.
 	 * 
 	 * @param p1
