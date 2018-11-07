@@ -1,12 +1,12 @@
 package eu.b24u.javafx.draws;
 
-
 import eu.b24u.javafx.element.Punkt;
 import eu.b24u.javafx.minecraft.engine.Aplikacja;
 import eu.b24u.javafx.minecraft.engine.GameMenuBar;
 import eu.b24u.javafx.minecraft.engine.Plotno;
 import eu.b24u.javafx.minecraft.engine.Program;
 import eu.b24u.javafx.minecraft.engine.Scena;
+import javafx.scene.paint.Color;
 
 public class MyDraws extends Aplikacja {
 
@@ -59,37 +59,47 @@ public class MyDraws extends Aplikacja {
 
 		// plotno.rysujOkrag(300, 300, 50, javafx.scene.paint.Color.BLUE);
 		// plotno.rysujLinie(275, 325, 275, 430);
+		
+		Punkt pierwszy = new Punkt(1050, 1920);
+		Punkt drugi = new Punkt(0, 0);
+		// plotno.rysujPelnyProstokat(p1 , p2, Color.GRAY);
 
-		Punkt p2 = new Punkt(1920, 1050);
-		Punkt p1 = new Punkt(0, 0);
-		plotno.rysujPelnyProstokat(p1, p2, javafx.scene.paint.Color.GRAY);
+		// wieleKulek(plotno);
 
+		plotno.rysujOkrag(150, 150, 50, javafx.scene.paint.Color.BLUE);
+		plotno.rysujOkrag(300, 300, 50, javafx.scene.paint.Color.BLUE);
+
+		double odleglosc = Oblicz.odlegloscPomiedzyDwomaPunktami(pierwszy, drugi);
+		plotno.wypiszTekst(50, 50, 30, "Odleglosc :" + odleglosc, Color.RED);
+
+		Kulka mojaKulka = new Kulka(plotno, 500, 500);
+		// Trojkat figuraTrojkat = new Trojkat(plotno);
+
+	}
+
+	private void wieleKulek(Plotno plotno) {
 		// wartosc poczatkowa ; warunek kontunuacji ; krok
-		for (int i = 1; i < 0; i++) {
+		for (int i = 1; i < 100; i++) {
 			int x = Program.losujLiczbe(20, 1820);
 			int y = Program.losujLiczbe(20, 600);
 			int r = Program.losujLiczbe(20, 50);
 
 			plotno.rysujOkrag(x, y, r, javafx.scene.paint.Color.BLUEVIOLET);
 		}
-		for (int i = 1; i < 2; i++) {
+		for (int i = 1; i < 50; i++) {
 			int x = Program.losujLiczbe(20, 1820);
 			int y = Program.losujLiczbe(20, 600);
 			int r = Program.losujLiczbe(20, 50);
-			plotno.rysujOkrag(x, y, 5, javafx.scene.paint.Color.GREEN);
-
 			plotno.rysujOkrag(x, y, r, javafx.scene.paint.Color.BLUE);
 		}
-		for (int i = 1; i < 0; i++) {
+		for (int i = 1; i < 20; i++) {
 			int x = Program.losujLiczbe(20, 1820);
 			int y = Program.losujLiczbe(20, 600);
 			int r = Program.losujLiczbe(20, 100);
 			plotno.rysujOkrag(x, y, r, javafx.scene.paint.Color.DARKBLUE);
 		}
-
-		// Trojkat figuraTrojkat = new Trojkat(plotno);
-
 	}
+
 
 	@Override
 	public void zdarzenieKlikniecaMyszka(double x, double y, Plotno plotno) {
