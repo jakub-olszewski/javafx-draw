@@ -72,7 +72,13 @@ public class MyDraws extends Aplikacja {
 		double odleglosc = Oblicz.odlegloscPomiedzyDwomaPunktami(pierwszy, drugi);
 		plotno.wypiszTekst(50, 50, 30, "Odleglosc :" + odleglosc, Color.RED);
 
-		Kulka mojaKulka = new Kulka(plotno, 500, 500);
+		for (int i = 0; i < 10; i++) {
+			new Kulka(plotno, 500 + i * 50, 500, Color.AQUA);
+			new Kulka(plotno, 500 + i * 50, 550, Color.BLUEVIOLET);
+			new Kulka(plotno, 500 + i * 50, 600, Color.BROWN);
+		}
+
+		// mojaKulka.rysuj();
 		// Trojkat figuraTrojkat = new Trojkat(plotno);
 
 	}

@@ -12,7 +12,7 @@ public abstract class Rysunek extends DrawElement {
 	}
 
 	public Rysunek(Plotno plotno, int x, int y) {
-		super(plotno);
+		this(plotno);
 		this.x = x;
 		this.y = y;
 	}

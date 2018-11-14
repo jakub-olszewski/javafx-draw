@@ -1,6 +1,7 @@
 package eu.b24u.javafx.draws;
 
 import eu.b24u.javafx.minecraft.engine.Plotno;
+import javafx.scene.paint.Color;
 
 /**
  * Klasa rysujaca kulke
@@ -11,6 +12,7 @@ import eu.b24u.javafx.minecraft.engine.Plotno;
 public class Kulka extends Rysunek {
 
 	int promien = 50;
+	private Color kolor;
 
 	/**
 	 * Konstruktor do tworzenia kulki
@@ -19,13 +21,15 @@ public class Kulka extends Rysunek {
 	 * @param x
 	 * @param y
 	 */
-	public Kulka(Plotno plotno, int x, int y) {
+	public Kulka(Plotno plotno, int x, int y, javafx.scene.paint.Color kolor) {
 		super(plotno, x, y);
+		this.kolor = kolor;
+		rysuj();
 	}
 
 	@Override
 	public void rysuj() {
-		plotno.rysujOkrag(x - promien / 2, y - promien / 2, promien, javafx.scene.paint.Color.RED);
+		plotno.rysujOkrag(x - promien / 2, y - promien / 2, promien, kolor);
 	}
 
 
